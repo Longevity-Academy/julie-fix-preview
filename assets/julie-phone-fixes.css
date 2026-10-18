@@ -56,12 +56,15 @@
   html body #top.hero .hero-year{font-size:12px!important;letter-spacing:.18em!important;text-transform:uppercase;margin-bottom:22px!important;color:#8AD2FF!important}
   html body #top.hero .hero-head{font-size:46px!important;line-height:1.02!important;margin-bottom:26px!important}
   html body #top.hero .hero-head .serif-i{font-size:36px!important;display:block;margin-top:12px;line-height:1.12!important}
-  html body #top.hero .hero-desc{font-size:18px!important;line-height:1.65!important;margin:0 0 32px!important;max-width:100%!important;color:#DCE6F5!important}
+  html body #top.hero .hero-desc{font-size:18px!important;line-height:1.65!important;margin:0 0 32px!important;max-width:100%!important;color:#F4F8FE!important}
   html body #top.hero .hero-actions{display:block!important;margin:0!important}
   html body #top.hero .hero-actions .btn-blue{display:flex!important;justify-content:center;align-items:center;width:100%;min-height:60px;font-size:18px!important;padding:18px 22px!important;border-radius:999px!important;background:#FFFFFF!important;background-image:none!important;color:#0A1E3F!important;-webkit-text-fill-color:#0A1E3F!important;box-shadow:0 10px 28px rgba(0,0,0,.35)!important}
   html body #top.hero .hero-actions .btn-blue::after,html body #top.hero .hero-actions .btn-blue::before{display:none!important;content:none!important}
-  html body #top.hero .hero-dates-line{font-size:0!important;margin-top:18px!important;display:flex!important;gap:10px!important;flex-wrap:nowrap!important}
-  html body #top.hero .hero-dates-line span{display:block!important;flex:1 1 0!important;white-space:normal!important;font-size:14.5px!important;line-height:1.4!important;text-align:center;padding:14px 8px;border:1px solid rgba(255,255,255,.16);border-radius:14px;background:rgba(255,255,255,.04);color:#DCE6F5;font-style:normal;font-family:'Inter',sans-serif;font-weight:600}
+  html body #top.hero .hero-dates-line{font-size:0!important;margin-top:20px!important;display:flex!important;flex-direction:column!important;gap:8px!important;align-items:flex-start!important}
+  html body #top.hero .hero-dates-line span{display:block!important;white-space:nowrap!important;font-size:20px!important;line-height:1.25!important;text-align:left;padding:0;border:0;background:none;font-style:normal;font-family:'Inter',sans-serif;font-weight:700}
+  html body #top.hero .hero-dates-line .hd-1{color:#7DE5FF!important}
+  html body #top.hero .hero-dates-line .hd-2{color:#FFD98A!important}
+  html body #top.hero .hero-dates-line .hd-or{display:none!important}
 
   /* no tiny text anywhere */
   html body .tcard p,html body .jb p,html body .dv-pdp-value-card p,html body .how-step p,html body .acc-body p,html body .pk-sub,html body .shead p,html body .shead-sub,html body figcaption{font-size:16px!important;line-height:1.5!important}
@@ -227,8 +230,7 @@
   /* bullets in cards: one font, readable */
   html body #pricing .pk-ul li,html body #pricing .pk-spec dd,html body .tbody li,html body .dv-pdp-value-card li{font:500 16.5px/1.45 'Inter',sans-serif!important;letter-spacing:0!important}
   html body #pricing .pk-title{font-size:30px!important}
-  html body #pricing .pk-head::after{content:"Reserve your seat below — 2 minutes, 14-day full refund.";display:block;margin-top:10px;font:600 14px/1.3 'Inter',sans-serif;letter-spacing:.02em;color:#BFE3FF;-webkit-text-fill-color:#BFE3FF}
-  html body #julie .jb-vid video,html body #julie .jb-wide video{width:100%!important;height:auto!important;display:block!important}
+    html body #julie .jb-vid video,html body #julie .jb-wide video{width:100%!important;height:auto!important;display:block!important}
   /* enrol steps 1–2: Continue follows the form */
   html body #enrollModal .em-go,html body #enrollModal #emGo1,html body #enrollModal #emGo2{position:static!important;bottom:auto!important;margin-top:16px!important}
   html body #enrollModal #emErr,html body #enrollModal #emErr2{position:static!important;bottom:auto!important}
@@ -286,43 +288,4 @@
   html body #ckScreen .ck-head .ck-logo img{width:140px!important;height:auto!important;display:block!important}
   html body #ckScreen .ck-head .ck-callus{flex:1 1 auto!important;text-align:right!important;font-size:14px!important;white-space:nowrap!important;min-width:0!important;overflow:hidden!important;text-overflow:ellipsis!important}
   html body #ckScreen .ck-head .ck-stepper{flex:0 0 100%!important;order:3!important;margin-top:4px!important}
-}
-
-/* 2026-10-18 23:50 IDT — phone robustness under system font scaling (Samsung/Chrome "large text"):
-   nothing may exceed the screen width; every headline, button and chip scales with the viewport. Appearance only. */
-@media (max-width:760px){
-  html,body{overflow-x:hidden!important;max-width:100vw!important}
-  html body{font-size:min(18px,4.7vw)!important}
-  html body #top.hero .hero-head{font-size:min(50px,12.6vw)!important;overflow-wrap:anywhere}
-  html body #top.hero .hero-head .serif-i{font-size:min(40px,10vw)!important}
-  html body #top.hero .hero-desc{font-size:min(20px,5vw)!important}
-  html body #top.hero .hero-actions .btn-blue{white-space:nowrap!important;font-size:min(18px,4.6vw)!important;padding:16px 12px!important;min-height:56px!important;letter-spacing:0!important}
-  html body #top.hero .hero-dates-line{flex-wrap:wrap!important}
-  html body #top.hero .hero-dates-line span{flex:1 1 150px!important;font-size:min(14.5px,3.8vw)!important;padding:12px 6px!important;white-space:nowrap!important}
-  html body h2.anton,html body .fold .shead h2,html body .pk-head h2,html body .dv-pdp-value-h2,html body #faq h2,html body #pricing .pk-head h2,html body #press .shead h2,html body #school .shead h2{font-size:min(42px,10.8vw)!important;white-space:normal!important;overflow-wrap:anywhere;max-width:100%!important}
-  html body .shead p,html body .shead-sub,html body .pk-sub,html body #pricing .pk-head .pk-sub{font-size:min(19px,4.8vw)!important}
-  html body #julie .jb-chips{display:flex!important;flex-wrap:wrap!important;gap:8px!important;margin-top:14px!important}
-  html body #julie .jb-chips span{font-size:min(15px,3.9vw)!important;padding:8px 12px!important;white-space:nowrap!important;border-radius:999px!important}
-  html body #julie .jb-photo-body h3,html body #julie .jb-wide-body h3{font-size:min(28px,7vw)!important}
-  html body #julie .jb-photo-body p,html body #julie .jb-wide-body p,html body #julie .jb-photo-body .serif-i,html body #julie .jb-photo-body em{font-size:min(19px,4.7vw)!important}
-  html body #pricing .pk-title{font-size:min(32px,8vw)!important}
-  html body #pricing .pk-title::after{font-size:min(18px,4.5vw)!important}
-  html body #pricing .pk-price{font-size:min(56px,14vw)!important;flex-wrap:wrap!important}
-  html body #pricing .pk-price::after{font-size:min(16px,4vw)!important}
-  html body #pricing .pk-btn{width:100%!important;white-space:nowrap!important;font-size:min(19px,4.8vw)!important;padding:16px 10px!important;min-height:56px!important;letter-spacing:0!important}
-  html body #pricing .pk-btn span{white-space:nowrap!important}
-  html body #pricing .pk-ul li,html body #pricing .pk-spec dd{font-size:min(18px,4.5vw)!important}
-  /* swipe-rail cards: each card takes its own height (no empty bottoms, no crushed last card) */
-  html body #reveal .tgrid,html body #dv-live-wrap.dev-fold #dv-live .dv-pdp-value-grid.dv-rail,html body #how .how-steps,html body #julie .jbento{align-items:flex-start!important}
-  html body #reveal .tcard,html body #dv-live-wrap.dev-fold #dv-live .dv-pdp-value-grid.dv-rail>.dv-pdp-value-card,html body #how .how-step,html body #julie .jb{height:auto!important;min-height:0!important;max-height:none!important;flex-basis:82%!important}
-  html body .tbody h3{font-size:min(26px,6.4vw)!important}
-  html body .tlead,html body .tcard p{font-size:min(18px,4.5vw)!important}
-  html body .dev-fold .dv-pdp-value-card h3{font-size:min(24px,6vw)!important}
-  html body .dev-fold .dv-pdp-value-card p{font-size:min(18px,4.5vw)!important}
-  html body #how .how-step h3{font-size:min(22px,5.6vw)!important}
-  html body #how .how-step p{font-size:min(17.5px,4.4vw)!important}
-  html body .jb .btn,html body .jb-wide-body .btn,html body .band .btn{white-space:nowrap!important;font-size:min(17px,4.4vw)!important}
-  html body .band-inner p{font-size:min(32px,8vw)!important}
-  html body .lla-cta-pill{font-size:min(14.5px,3.8vw)!important;white-space:nowrap!important}
-  html body .acc-head{font-size:min(19px,4.8vw)!important}
 }
